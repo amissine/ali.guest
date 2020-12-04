@@ -4,17 +4,17 @@ Securely demoes new features in production with [SSH remote port forwarding](htt
 
 ## Overview
 
-A piece of software is a living thing. Its habitat is the community of users. When it goes to production, the public feedback can either kill it, or make it stronger - provided it is  exposed to the public nicely. Here I am talking about early, demo-like, exposure of something new.
+A piece of software is a living thing. Its habitat is the community of users. When it goes to production, the public feedback can either kill it, or make it stronger - provided it is  exposed to the public nicely. Here I am talking about early, demo-like, exposure of something new in my software.
 
 For example, presently [my piece of software](https://docs.google.com/document/d/11oG00Nvn6vcFC2AemFmSkZNp0trEFrUHxL0IrkGR45c/ "the ALI project") collects market feed from multiple crypto exchanges (Bitfinex, Coinbase, Kraken, SDEX) for multiple assets (BTC, CNY, EUR, ETH, XLM, XRP, XXA), and then saves/archives the feed uniformly. I want to expose the feed to the public as soon as it reaches, in my opinion, production quality - meaning, it does not break on an error from the source and keeps accumulating, quietly. It would be nice (and cost-effective, too) to demo the feed with SSH, while keeping my resources from being compromised.
 
-As the feed is being accumulated, it can be transfered to an SSH client. And how do I prevent the client from doing anything else on my server? The SSH remote port forwarding comes handy here. The client logs in as `guest` (and `guest` is an ultimately non-privileged account on my server), passing to the server the port number to use for remote port forwarding. The `guest` account on the server takes this port (for example, `12345`) and connects back to the client as follows:
+As the feed is being accumulated, it can be transfered to an SSH client. And how do I prevent the client from doing anything else on my server? The SSH remote port forwarding comes handy here. The client logs in as `guest` (and `guest` is a minimally-privileged account on my server), passing to the server the port number to use for remote port forwarding. The `guest` account on the server takes this port (for example, `12345`) and connects back to the client as follows:
 
 ```
 ssh -p 12345 root@localhost './accept_transfer.sh'
 ```
 
-And then this second connection is used to run `'./accept_transfer.sh'` on the client and to transfer the feed to the client.
+And then this second connection is used to transfer the feed to the client.
 
 But you would not want me to access your box as `root`, would you? And I am not doing that. Instead, it is the Docker image on your client box my server is communicating with for the duration of the demo. You run the image in the Docker container as follows:
 
@@ -31,7 +31,7 @@ The image:
   - runs `./accept_transfer.sh` inside the image container:
     - accepts the historical and the real-time parts of the current market feed;
     - outputs the feed to your terminal;
-    - saves the feed for subsequent analysis in your $HOME/amissine/feed directory.
+    - saves the feed for subsequent analysis in your $HOME/ali/feed directory.
       > Please note that this directory is outside the image container.
 
 Not bad for a one-liner, is it? Try it out!
