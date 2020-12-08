@@ -1,6 +1,6 @@
 # The guest service
 
-Securely demoes new features in production with [SSH remote port forwarding](https://www.ssh.com/ssh/tunneling/example) and [Docker](https://www.docker.com/) images. 
+Securely demoes new features in production with [SSH remote port forwarding](https://www.ssh.com/ssh/tunneling/example) and [Docker](https://www.docker.com/). 
 
 ## Overview
 
