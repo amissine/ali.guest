@@ -25,12 +25,11 @@ sudo docker run -v $HOME/feed:/root/feed -it docker.io/amissine/guest:1.0.0
 The image:
 - gets pulled from DockerHub (unless pulled already);
 - runs in a container for the duration of the demo:
-  - logs in to my server as `guest`;
+  - connects and logs in to my server as `guest`;
   - passes to my server the port number to use for remote port forwarding;
   - accepts the connection from my server;
-  - runs `./accept_transfer.sh` inside the image container:
+  - on that second connection, the image:
     - accepts the historical and the real-time parts of the current market feed;
-    - outputs the feed to your terminal;
     - saves the `feed` for subsequent analysis in your $HOME directory.
       > And your home directory is outside the image container :)
 
