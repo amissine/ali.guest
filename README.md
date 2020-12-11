@@ -19,7 +19,7 @@ And then this second connection is used to transfer the feed to the client.
 But you would not want me to access your box as `root`, would you? And I am not doing that. Instead, it is the Docker image on your client box my server is communicating with for the duration of the demo. You run the image in the Docker container as follows:
 
 ```
-sudo docker run -it docker.io/amissine/guest:1.0.0 -v $HOME/feed:/root/feed
+sudo docker run -v $HOME/feed:/root/feed -it docker.io/amissine/guest:1.0.0
 ```
 
 The image:
