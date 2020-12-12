@@ -4,7 +4,7 @@ Securely demoes new features in production with [SSH remote port forwarding](htt
 
 ## Overview and Usage
 
-A piece of software is a living thing. Its habitat is the community of users. When it goes to production, the public feedback can either kill it, or make it stronger - provided it is  exposed to the public nicely. Here I am talking about early, demo-like, exposure of something new in my software.
+A piece of software is a living thing. Its habitat is the community of users. When it goes to production, the public feedback can either kill it, or make it stronger - provided it is  exposed to the public properly. Here I am talking about early, demo-like, exposure of something new in my software.
 
 For example, presently [my piece of software](https://docs.google.com/document/d/11oG00Nvn6vcFC2AemFmSkZNp0trEFrUHxL0IrkGR45c/ "the ALI project") collects market feed from multiple crypto exchanges (Bitfinex, Coinbase, Kraken, SDEX) for multiple assets (BTC, CNY, EUR, ETH, XLM, XRP, XXA), and then saves/archives the feed uniformly. I want to expose the feed to the public as soon as it reaches, in my opinion, production quality - meaning, it does not break on an error from the source and keeps accumulating, quietly. It would be nice (and cost-effective, too) to demo the feed with SSH, while keeping my resources from being compromised.
 
