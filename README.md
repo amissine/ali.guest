@@ -45,4 +45,4 @@ Now you can also SSH to this instance from your own box and watch the feed comin
 
 ## Discussion
 
-In this setup, the server has full control over the resources it exposes to the client, and so does the client with relation to the server. This can be used by independent parties to securely collaborate during the R&D phase of a decentralised enterprise. For example, you can use my feed to develop and test your own trading strategy.
+In this setup, the server has full control over the resources it exposes to the client, and so does the client with relation to the server. This can be used by independent parties to securely collaborate during the R&D phase on a decentralised enterprise. For example, you can use my feed to develop and test your own trading strategy.
