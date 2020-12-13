@@ -1,6 +1,6 @@
 # The guest service
 
-Securely demoes new features in production with [SSH remote port forwarding](https://www.ssh.com/ssh/tunneling/example) and [Docker](https://www.docker.com/). 
+Securely exposes new features in production with [SSH remote port forwarding](https://www.ssh.com/ssh/tunneling/example) and [Docker](https://www.docker.com/). 
 
 ## Overview and Usage
 
@@ -42,3 +42,7 @@ You can run it from your browser using [Play with Docker](https://labs.play-with
 - hit Enter!
 
 Now you can SSH to this instance and watch the feed coming your way: `tail -f feed`.
+
+##Discussion
+
+In this setup, the server has full control over the resources it exposes to the client, and so does the client. This can be used by independent parties to securely collaborate during the R&D phase of a decentrilised enterprise. For example, you can use my feed to develop and test your trading strategy.
