@@ -43,6 +43,6 @@ You can run it from your browser using [Play with Docker](https://labs.play-with
 
 Now you can SSH to this instance and watch the feed coming your way: `tail -f feed`.
 
-##Discussion
+## Discussion
 
 In this setup, the server has full control over the resources it exposes to the client, and so does the client. This can be used by independent parties to securely collaborate during the R&D phase of a decentrilised enterprise. For example, you can use my feed to develop and test your trading strategy.
