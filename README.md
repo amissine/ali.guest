@@ -34,3 +34,11 @@ The image:
       > And your home directory is outside the image container :)
 
 Not bad for a one-liner, is it? Try it out!
+
+You can run it from your browser using [Play with Docker](https://labs.play-with-docker.com/):
+- Login as docker, then Start;
+- ADD NEW INSTANCE;
+- copy and paste `docker run -v $HOME:/umf -it docker.io/amissine/ali_guest:1.0.0` to the command line;
+- hit Enter!
+
+Now you can SSH to this instance and watch the feed coming your way: `tail -f feed`.
