@@ -41,7 +41,7 @@ You can run it from your browser using [Play with Docker](https://labs.play-with
 - copy and paste `docker run -v $HOME:/umf -it docker.io/amissine/ali_guest:1.0.0` to the command line;
 - hit Enter!
 
-Now you can SSH to this instance and watch the feed coming your way: `tail -f feed`.
+Now you can also SSH to this instance from your own box and watch the feed coming your way in real time: `tail -f feed`.
 
 ## Discussion
 
