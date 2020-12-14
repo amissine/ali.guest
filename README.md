@@ -2,6 +2,13 @@
 
 Securely exposes new features in production with [SSH remote port forwarding](https://www.ssh.com/ssh/tunneling/example) and [Docker](https://www.docker.com/). 
 
+## Welcome, Guest!
+
+The SSH server on my Raspberry Pi is now open for public. Run
+```
+docker run -v $HOME:/umf -it docker.io/amissine/ali_guest:1.0.0
+```
+
 ## Overview and Usage
 
 A piece of software is a living thing. Its habitat is the community of users. When it goes to production, the public feedback can either kill it, or make it stronger - provided it is  exposed to the public properly. Here I am talking about early, demo-like, exposure of something new in my software.
@@ -19,7 +26,7 @@ And then this second connection is used to transfer the feed to the client.
 But you would not want me to access your box as `root`, would you? And I am not doing that. Instead, it is the Docker image on your client box my server is communicating with for the duration of the demo. You run the image in the Docker container as follows:
 
 ```
-sudo docker run -v $HOME:/umf -it docker.io/amissine/ali_guest:1.0.0
+docker run -v $HOME:/umf -it docker.io/amissine/ali_guest:1.0.0
 ```
 
 The image:
