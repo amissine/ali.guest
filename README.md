@@ -4,10 +4,11 @@ Securely exposes new features in production with [SSH remote port forwarding](ht
 
 ## Welcome, Guest!
 
-The SSH server on my Raspberry Pi is now open for public. Run
+The SSH server on my Raspberry Pi is now open to public. Run
 ```
 docker run -v $HOME:/umf -it docker.io/amissine/ali_guest:1.0.0
 ```
+to get real-time market feed (trades, orderbooks) from 4 crypto exchanges. In your browser, go to [Play with Docker](https://labs.play-with-docker.com/), Login as docker, Start, ADD NEW INSTANCE, copy and paste the above into the command line. Now SSH to this instance from your own box and watch the feed coming your way in real time: `tail -f feed`.
 
 ## Overview and Usage
 
