@@ -10,7 +10,7 @@ docker run -v $HOME:/umf -it docker.io/amissine/ali_guest:1.0.0
 ```
 to get real-time market feed (trades, orderbooks) from 4 crypto exchanges. In your browser, go to [Play with Docker](https://labs.play-with-docker.com/), Login as docker, Start, ADD NEW INSTANCE, copy and paste the above into the command line. Now SSH to this instance from your own box and watch the feed coming your way in real time: `tail -f feed`.
 
-## Overview and Usage
+## Overview
 
 A piece of software is a living thing. Its habitat is the community of users. When it goes to production, the public feedback can either kill it, or make it stronger - provided it is  exposed to the public properly. Here I am talking about early, demo-like, exposure of something new in my software.
 
